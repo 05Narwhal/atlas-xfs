@@ -1,0 +1,28 @@
+[package]
+name = "atlas-xfs-fuzz"
+version = "0.0.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+atlas-xfs = { path = ".." }
+atlas-fs-core = { version = "0.1", path = "X:/Documents/Coding/Projects/Libraries/Rust/atlas-fs-core" }
+
+# Keeps the fuzz crate out of the library's own build.
+[workspace]
+members = ["."]
+
+[profile.release]
+debug = 1
+
+[[bin]]
+name = "xfs_mount"
+path = "fuzz_targets/xfs_mount.rs"
+test = false
+doc = false
+bench = false

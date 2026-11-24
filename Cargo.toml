@@ -1,0 +1,39 @@
+[package]
+name = "atlas-xfs"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT OR Apache-2.0"
+description = "Read XFS volumes, versions 4 and 5: shortform, block, leaf and node directories, extent and B-tree data forks."
+repository = "https://github.com/05Narwhal/atlas-xfs"
+readme = "README.md"
+keywords = ["xfs", "filesystem", "linux", "parser", "sgi"]
+categories = ["filesystem", "parser-implementations"]
+authors = ["Julian A. Loy"]
+
+[features]
+# Test volume builders and seed inputs, for crates that test against this one.
+# The fixture loader decompresses with zstd.
+test-util = ["dep:zstd"]
+
+[dependencies]
+atlas-fs-core = { version = "0.1", path = "X:/Documents/Coding/Projects/Libraries/Rust/atlas-fs-core" }
+# The packed test images (`test-util` only).
+zstd = { version = "0.14", default-features = false, optional = true }
+
+[dev-dependencies]
+# The packed test images.
+zstd = { version = "0.14", default-features = false }
+
+[lints.rust]
+unsafe_code = "forbid"
+unused_must_use = "deny"
+rust_2018_idioms = { level = "warn", priority = -1 }
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+dbg_macro = "warn"
+todo = "warn"
+print_stdout = "warn"
+print_stderr = "warn"
+undocumented_unsafe_blocks = "deny"
