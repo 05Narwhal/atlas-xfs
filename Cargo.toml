@@ -18,7 +18,7 @@ authors = ["Julian A. Loy"]
 test-util = ["dep:zstd"]
 
 [dependencies]
-atlas-fs-core = { version = "0.1", path = "X:/Documents/Coding/Projects/Libraries/Rust/atlas-fs-core" }
+atlas-fs-core = { version = "0.1", path = "../atlas-fs-core" }
 # The packed test images (`test-util` only).
 zstd = { version = "0.14", default-features = false, optional = true }
 
