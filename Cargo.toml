@@ -1,12 +1,12 @@
 [package]
 name = "atlas-xfs"
-version = "26.0.1-a"
+version = "26.0.2-a"
 edition = "2024"
 rust-version = "1.88"
 license = "MIT OR Apache-2.0"
 description = "Read XFS volumes, versions 4 and 5: shortform, block, leaf and node directories, extent and B-tree data forks."
 repository = "https://github.com/05Narwhal/atlas-xfs"
-homepage = "https://julianloy.com"
+documentation = "https://disk-atlas.julianloy.com/docs"
 readme = "README.md"
 keywords = ["xfs", "filesystem", "linux", "parser", "sgi"]
 categories = ["filesystem", "parser-implementations"]
@@ -18,7 +18,7 @@ authors = ["Julian A. Loy"]
 test-util = ["dep:zstd"]
 
 [dependencies]
-atlas-fs-core = { version = "26.0.1-a", path = "../atlas-fs-core" }
+atlas-fs-core = { version = "26.0.2-a", path = "../atlas-fs-core" }
 # The packed test images (`test-util` only).
 zstd = { version = "0.14", default-features = false, optional = true }
 
