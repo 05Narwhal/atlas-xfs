@@ -29,7 +29,7 @@ this one and is not part of the stable API.
 
 ```toml
 [dependencies]
-atlas-xfs = "0.1"
+atlas-xfs = "26.0.1-a"
 ```
 
 Minimum supported Rust version: 1.88.

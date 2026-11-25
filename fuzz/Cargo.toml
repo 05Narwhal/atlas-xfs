@@ -11,7 +11,7 @@ cargo-fuzz = true
 [dependencies]
 libfuzzer-sys = "0.4"
 atlas-xfs = { path = ".." }
-atlas-fs-core = { version = "0.1", path = "../../atlas-fs-core" }
+atlas-fs-core = { version = "26.0.1-a", path = "../../atlas-fs-core" }
 
 # Keeps the fuzz crate out of the library's own build.
 [workspace]
