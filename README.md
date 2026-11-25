@@ -1,6 +1,6 @@
 # atlas-xfs
 
-<!-- badges -->[![crates.io](https://img.shields.io/crates/v/atlas-xfs.svg)](https://crates.io/crates/atlas-xfs) [![docs.rs](https://img.shields.io/docsrs/atlas-xfs)](https://docs.rs/atlas-xfs) [![CI](https://github.com/05Narwhal/atlas-xfs/actions/workflows/ci.yml/badge.svg)](https://github.com/05Narwhal/atlas-xfs/actions/workflows/ci.yml) ![License](https://img.shields.io/crates/l/atlas-xfs.svg)
+[![crates.io](https://img.shields.io/crates/v/atlas-xfs.svg)](https://crates.io/crates/atlas-xfs) [![docs.rs](https://img.shields.io/docsrs/atlas-xfs)](https://docs.rs/atlas-xfs) [![CI](https://github.com/05Narwhal/atlas-xfs/actions/workflows/ci.yml/badge.svg)](https://github.com/05Narwhal/atlas-xfs/actions/workflows/ci.yml) ![License](https://img.shields.io/crates/l/atlas-xfs.svg)
 
 A read-only XFS reader. It implements `atlas_fs_core::fs::FileSystem`, so a mounted volume lists folders, looks up names, reads
 file content and reports its allocation through the same trait as the other `atlas-*` readers.
